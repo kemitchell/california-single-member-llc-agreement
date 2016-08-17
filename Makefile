@@ -7,7 +7,7 @@ $(COMMONFORM):
 %.pdf: %.docx
 	doc2pdf $<
 
-%.docx: %.cform %.signatures.json %.blanks.json %.options
+%.docx: %.cform %.signatures.json %.blanks.json %.options $(COMMONFORM)
 	$(COMMONFORM) render \
 		--format docx \
 		--signatures $*.signatures.json \
