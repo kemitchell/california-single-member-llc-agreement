@@ -7,6 +7,16 @@ signatures:
   - samePage: true
     header: The undersigned is the spouse or registered domestic partner of the Sole Member and acknowledges that they have read the Operating Agreement and understand its provisions. The undersigned is aware that, by the provisions of the Operating Agreement, the Sole Member and their spouse or domestic partner have agreed to sell or transfer all _ _[his/her]_ _ membership interest in the Company, including any community property interest or quasi-community property interest, in accordance with the terms and provisions of the Operating Agreement. The undersigned expressly approves of and agrees to be bound by the provisions of the Operating Agreement in its entirety, including, but not limited to, those provisions relating to the sales and transfers of membership interests and the restrictions on them. If the undersigned predeceases their spouse or domestic partner when their spouse or domestic partner owns any membership interest in the Company, they agree not to devise or bequeath whatever community property interest or quasi-community property interest they may have in the Company in contravention of the Agreement.
     information: [date]
+styles:
+  alignment: left
+  heading:
+    italic: true
+  beforeDefinition: false
+  afterDefinition: false
+  reference:
+    italic: true
+  referenceHeading:
+    italic: true
 ---
 
 This operating agreement is made as of `Date` by `Sole Member Name`, the **Sole Member**. The _Sole Member_ declares the following to be the operating agreement of a new limited liability company (the **Company**) under the California Revised Uniform Limited Liability Company Act (the **Act**).

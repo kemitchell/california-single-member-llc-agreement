@@ -2,7 +2,7 @@ TARGETS=build/agreement.docx
 
 all: $(TARGETS)
 
-build/%.docx: build/%.form build/%.title build/%.signatures | node_modules
+build/%.docx: build/%.form build/%.title build/%.signatures build/%.styles | node_modules
 	npx commonform-docx \
 		--title "$(shell cat build/$*.title)" \
 		--number outline \
@@ -11,6 +11,7 @@ build/%.docx: build/%.form build/%.title build/%.signatures | node_modules
 		--left-align-title \
 		--left-align-body \
 		--signatures build/$*.signatures \
+		--styles build/$*.styles \
 		$< > $@
 
 build/%.json: %.md | build node_modules
@@ -21,6 +22,9 @@ build/%.title: build/%.json | node_modules
 
 build/%.signatures: build/%.json | node_modules
 	npx json frontMatter.signatures < $< > $@
+
+build/%.styles: build/%.json | node_modules
+	npx json frontMatter.styles < $< > $@
 
 build/%.form: build/%.json | node_modules
 	npx json form < $< > $@
